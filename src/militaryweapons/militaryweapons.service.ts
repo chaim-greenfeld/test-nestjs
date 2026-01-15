@@ -20,6 +20,7 @@ export class MilitaryweaponsService {
 
     async purchaseItems(buyWeapons: BuyWeapons) {
         try{
+            
             const data = await this.weaponsRepository.findOne({
                 where: {id: buyWeapons.id}, raw:true
             });
